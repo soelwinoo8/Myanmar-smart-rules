@@ -2,35 +2,33 @@
   "version": 1,
   "rules": [
     {
-      "tag": "remote_ads",
-      "type": "remote",
-      "format": "binary",
-      "url": "https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_rule_set/geosite-category-ads-all.srs",
+      "domain_keyword": [
+        "ads", "track", "affiliate", "analytics", "doubleclick", "googleadservices", "popads", "adnxs"
+      ],
+      "domain_suffix": [
+        "doubleclick.net", "googleadservices.com", "popads.net", "adnxs.com"
+      ],
       "outbound": "block"
     },
     {
-      "tag": "myanmar_direct",
-      "rules": [
-        {
-          "geosite": ["youtube", "tiktok", "telegram", "viber", "netflix", "disney", "apple", "google", "icloud"],
-          "domain": [
-            "3u.com", "pangu.com.cn", "apple-dns.net", "itunes.apple.com", "gs.apple.com",
-            "albert.apple.com", "mzstatic.com", "kbzpay.com", "kbzbank.com",
-            "wavemoney.com.mm", "wavepay.io", "cbpay.com.mm", "cbbank.com.mm",
-            "ayabank.com", "ayapay.com", "gemini.google.com", "bard.google.com",
-            "generativelanguage.googleapis.com", "ai.google.dev", "aistudio.google.com",
-            "alkalimessages-pa.googleapis.com"
-          ],
-          "domain_keyword": ["kbzpay", "wavepay", "kpay", "wavemoney"],
-          "geoip": ["mm", "private", "telegram", "google", "netflix"],
-          "outbound": "direct"
-        },
-        {
-          "domain_keyword": ["ads", "track", "affiliate", "analytics"],
-          "domain_suffix": ["doubleclick.net", "googleadservices.com", "popads.net", "adnxs.com"],
-          "outbound": "block"
-        }
-      ]
+      "geosite": [
+        "youtube", "tiktok", "telegram", "viber", "netflix", "disney", "apple", "google", "icloud"
+      ],
+      "domain": [
+        "3u.com", "pangu.com.cn", "apple-dns.net", "itunes.apple.com", "gs.apple.com",
+        "albert.apple.com", "mzstatic.com", "kbzpay.com", "kbzbank.com",
+        "wavemoney.com.mm", "wavepay.io", "cbpay.com.mm", "cbbank.com.mm",
+        "ayabank.com", "ayapay.com", "gemini.google.com", "bard.google.com",
+        "generativelanguage.googleapis.com", "ai.google.dev", "aistudio.google.com",
+        "alkalimessages-pa.googleapis.com"
+      ],
+      "domain_keyword": [
+        "kbzpay", "wavepay", "kpay", "wavemoney"
+      ],
+      "geoip": [
+        "mm", "private", "telegram", "google", "netflix"
+      ],
+      "outbound": "direct"
     }
   ]
 }
