@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "notes": "Myanmar Smart Routing - Direct for Banks/YouTube/3uTools",
+  "notes": "Myanmar Smart Rules - Fixed Syntax",
   "rules": [
     {
       "tag": "ads_block",
@@ -13,13 +13,15 @@
       "tag": "direct_rules",
       "rules": [
         {
-          "geosite": ["youtube", "tiktok", "telegram", "viber", "netflix", "disney", "apple", "google", "icloud"],
+          "geosite": [
+            "youtube", "tiktok", "telegram", "viber", "netflix", "disney", "apple", "google", "icloud"
+          ],
           "domain": [
-            "3u.com", "pangu.com.cn", "apple-dns.net", "itunes.apple.com", "gs.apple.com", 
-            "albert.apple.com", "mzstatic.com", "kbzpay.com", "kbzbank.com", 
-            "wavemoney.com.mm", "wavepay.io", "cbpay.com.mm", "cbbank.com.mm", 
-            "ayabank.com", "ayapay.com", "gemini.google.com", "bard.google.com", 
-            "generativelanguage.googleapis.com", "ai.google.dev", "aistudio.google.com", 
+            "3u.com", "pangu.com.cn", "apple-dns.net", "itunes.apple.com", "gs.apple.com",
+            "albert.apple.com", "mzstatic.com", "kbzpay.com", "kbzbank.com",
+            "wavemoney.com.mm", "wavepay.io", "cbpay.com.mm", "cbbank.com.mm",
+            "ayabank.com", "ayapay.com", "gemini.google.com", "bard.google.com",
+            "generativelanguage.googleapis.com", "ai.google.dev", "aistudio.google.com",
             "alkalimessages-pa.googleapis.com"
           ],
           "domain_keyword": ["kbzpay", "wavepay", "kpay", "wavemoney"],
