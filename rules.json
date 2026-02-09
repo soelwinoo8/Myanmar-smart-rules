@@ -2,31 +2,70 @@
   "version": 1,
   "rules": [
     {
-      "domain_keyword": [
-        "ads", "track", "affiliate", "analytics", "doubleclick", "googleadservices", "popads", "adnxs"
-      ],
       "domain_suffix": [
-        "doubleclick.net", "googleadservices.com", "popads.net", "adnxs.com"
+        "doubleclick.net",
+        "googleadservices.com",
+        "popads.net",
+        "adnxs.com"
+      ],
+      "domain_keyword": [
+        "ads",
+        "track",
+        "affiliate",
+        "analytics"
+      ],
+      "geosite": [
+        "category-ads-all"
       ],
       "outbound": "block"
     },
     {
-      "geosite": [
-        "youtube", "tiktok", "telegram", "viber", "netflix", "disney", "apple", "google", "icloud"
-      ],
       "domain": [
-        "3u.com", "pangu.com.cn", "apple-dns.net", "itunes.apple.com", "gs.apple.com",
-        "albert.apple.com", "mzstatic.com", "kbzpay.com", "kbzbank.com",
-        "wavemoney.com.mm", "wavepay.io", "cbpay.com.mm", "cbbank.com.mm",
-        "ayabank.com", "ayapay.com", "gemini.google.com", "bard.google.com",
-        "generativelanguage.googleapis.com", "ai.google.dev", "aistudio.google.com",
+        "3u.com",
+        "pangu.com.cn",
+        "apple-dns.net",
+        "itunes.apple.com",
+        "gs.apple.com",
+        "albert.apple.com",
+        "mzstatic.com",
+        "kbzpay.com",
+        "kbzbank.com",
+        "wavemoney.com.mm",
+        "wavepay.io",
+        "cbpay.com.mm",
+        "cbbank.com.mm",
+        "ayabank.com",
+        "ayapay.com",
+        "gemini.google.com",
+        "bard.google.com",
+        "generativelanguage.googleapis.com",
+        "ai.google.dev",
+        "aistudio.google.com",
         "alkalimessages-pa.googleapis.com"
       ],
       "domain_keyword": [
-        "kbzpay", "wavepay", "kpay", "wavemoney"
+        "kbzpay",
+        "wavepay",
+        "kpay",
+        "wavemoney"
+      ],
+      "geosite": [
+        "youtube",
+        "tiktok",
+        "telegram",
+        "viber",
+        "netflix",
+        "disney",
+        "apple",
+        "google",
+        "icloud"
       ],
       "geoip": [
-        "mm", "private", "telegram", "google", "netflix"
+        "mm",
+        "private",
+        "telegram",
+        "google",
+        "netflix"
       ],
       "outbound": "direct"
     }
