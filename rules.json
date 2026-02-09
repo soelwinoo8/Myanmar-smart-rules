@@ -1,39 +1,69 @@
-{
-  "version": 1,
-  "notes": "Myanmar Smart Rules - Fixed Syntax",
-  "rules": [
-    {
-      "tag": "ads_block",
-      "type": "remote",
-      "format": "binary",
-      "url": "https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_rule_set/geosite-category-ads-all.srs",
-      "outbound": "block"
-    },
-    {
-      "tag": "direct_rules",
-      "rules": [
-        {
-          "geosite": [
-            "youtube", "tiktok", "telegram", "viber", "netflix", "disney", "apple", "google", "icloud"
-          ],
-          "domain": [
-            "3u.com", "pangu.com.cn", "apple-dns.net", "itunes.apple.com", "gs.apple.com",
-            "albert.apple.com", "mzstatic.com", "kbzpay.com", "kbzbank.com",
-            "wavemoney.com.mm", "wavepay.io", "cbpay.com.mm", "cbbank.com.mm",
-            "ayabank.com", "ayapay.com", "gemini.google.com", "bard.google.com",
-            "generativelanguage.googleapis.com", "ai.google.dev", "aistudio.google.com",
-            "alkalimessages-pa.googleapis.com"
-          ],
-          "domain_keyword": ["kbzpay", "wavepay", "kpay", "wavemoney"],
-          "geoip": ["mm", "private", "telegram", "google", "netflix"],
-          "outbound": "direct"
-        },
-        {
-          "domain_keyword": ["ads", "track", "affiliate", "analytics"],
-          "domain_suffix": ["doubleclick.net", "googleadservices.com", "popads.net", "adnxs.com"],
-          "outbound": "block"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "ads_block",
+    "remarks": "Block Ads",
+    "type": "field",
+    "outboundTag": "block",
+    "domain": [
+      "geosite:category-ads-all",
+      "keyword:ads",
+      "keyword:track",
+      "keyword:analytics",
+      "doubleclick.net",
+      "googleadservices.com",
+      "popads.net",
+      "adnxs.com"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "myanmar_direct",
+    "remarks": "Direct for Banks and Entertainment",
+    "type": "field",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:youtube",
+      "geosite:tiktok",
+      "geosite:telegram",
+      "geosite:viber",
+      "geosite:netflix",
+      "geosite:disney",
+      "geosite:apple",
+      "geosite:google",
+      "geosite:icloud",
+      "domain:3u.com",
+      "domain:pangu.com.cn",
+      "domain:apple-dns.net",
+      "domain:itunes.apple.com",
+      "domain:gs.apple.com",
+      "domain:albert.apple.com",
+      "domain:mzstatic.com",
+      "domain:kbzpay.com",
+      "domain:kbzbank.com",
+      "domain:wavemoney.com.mm",
+      "domain:wavepay.io",
+      "domain:cbpay.com.mm",
+      "domain:cbbank.com.mm",
+      "domain:ayabank.com",
+      "domain:ayapay.com",
+      "domain:gemini.google.com",
+      "domain:bard.google.com",
+      "domain:generativelanguage.googleapis.com",
+      "domain:ai.google.dev",
+      "domain:aistudio.google.com",
+      "domain:alkalimessages-pa.googleapis.com",
+      "keyword:kbzpay",
+      "keyword:wavepay",
+      "keyword:kpay",
+      "keyword:wavemoney"
+    ],
+    "ip": [
+      "geoip:mm",
+      "geoip:private",
+      "geoip:telegram",
+      "geoip:google",
+      "geoip:netflix"
+    ],
+    "enabled": true
+  }
+]
